@@ -1,0 +1,60 @@
+{
+  "browser": {
+    "type": "edge",
+    "headless": false,
+    "window_size": {
+      "width": 1920,
+      "height": 1080
+    },
+    "user_agents": {
+      "chrome": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      "edge": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0"
+    }
+  },
+  "xiumi": {
+    "base_url": "https://xiumi.us",
+    "login_timeout": 300,
+    "page_load_timeout": 30,
+    "article_limit": 10
+  },
+  "selectors": {
+    "login_success": [
+      "//div[contains(@class, 'user')]",
+      "//div[contains(@class, 'avatar')]",
+      "//span[contains(text(), '用户')]",
+      "//div[contains(@class, 'header-user')]"
+    ],
+    "article_list": [
+      "//div[contains(@class, 'article-item')]",
+      "//div[contains(@class, 'post-item')]",
+      "//li[contains(@class, 'article')]",
+      "//div[contains(@class, 'content-item')]"
+    ],
+    "article_title": [
+      ".//h3", ".//h2", ".//h4",
+      ".//*[contains(@class, 'title')]",
+      ".//*[contains(@class, 'name')]"
+    ],
+    "quickshare_button": [
+      "//button[contains(text(), '另存')]",
+      "//a[contains(text(), '另存')]",
+      "//div[contains(text(), '另存')]",
+      "//span[contains(text(), '另存')]",
+      "//button[contains(@class, 'share')]",
+      "//button[contains(@class, 'save')]",
+      "//div[contains(@class, 'quickshare')]"
+    ],
+    "quickshare_code": [
+      "//input[contains(@placeholder, '另存码')]",
+      "//textarea[contains(@placeholder, '另存码')]",
+      "//div[contains(@class, 'code')]//input",
+      "//div[contains(@class, 'share-code')]",
+      "//span[contains(@class, 'code')]"
+    ]
+  },
+  "output": {
+    "format": "json",
+    "filename_prefix": "xiumi_quickshare_codes",
+    "include_timestamp": true
+  }
+}

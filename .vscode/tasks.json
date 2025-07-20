@@ -1,0 +1,16 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "运行秀米另存码获取工具",
+			"type": "shell",
+			"command": "python",
+			"args": [
+				"fetch_quickshare.py"
+			],
+			"group": "build",
+			"isBackground": false,
+			"problemMatcher": []
+		}
+	]
+}
